@@ -1,0 +1,3 @@
+[submodule "BuildingDepot-v3"]
+	path = BuildingDepot-v3
+	url = https://github.com/jbkoh/BuildingDepot-v3.git
