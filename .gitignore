@@ -102,3 +102,11 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+
+# Project-specific
+app
+bd3ds/configs
+bd3cs/configs
+*.cert
+*.key
