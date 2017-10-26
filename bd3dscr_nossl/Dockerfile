@@ -13,15 +13,17 @@ RUN cp /redis-stable/src/redis-server /usr/local/bin/
 
 # Copy and install BD DS
 RUN rm -rf /app
-COPY ./app /app
-COPY ./configs/bd_config /app/cs_config
-ENV CS_SETTINGS=/app/cs_config
+COPY ./ds_app /app
+COPY ./configs/bd_config /app/ds_config
+ENV DS_SETTINGS=/app/ds_config
 COPY ./configs/pip_packages.list /app/
 RUN pip install -r /app/pip_packages.list
-COPY setup_bd.py /app/
 COPY configs/uwsgi.ini /app
 
-EXPOSE 80 443 8080 27017 
+# Copy and install BD CR
+COPY cr_app /cr_app
+
+EXPOSE 8080 80
 
 # Override existing entrypoint for SSL.
 COPY entrypoint.sh /entrypoint.sh

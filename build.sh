@@ -4,8 +4,6 @@
 #docker build -t bd3ds .
 #docker push jbkoh/bd3ds
 
-bash configure.sh
-
 rm -r bd3cs/app
 cp -r BuildingDepot-v3/buildingdepot/CentralService bd3cs/app
 cp -r configs bd3cs/

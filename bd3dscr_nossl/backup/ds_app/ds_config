@@ -1,11 +1,11 @@
 DEBUG = True
 MONGODB_DATABASE = 'buildingdepot'
-MONGODB_HOST = '172.17.0.1'
+MONGODB_HOST = '127.0.0.1'
 MONGODB_PORT = 27017
 SECRET_KEY = 'This Is Secret Key. Please Make It Complicated'
 TOKEN_EXPIRATION = 3600
 NAME = 'ds1'
-INFLUXDB_HOST = '172.17.0.1'
+INFLUXDB_HOST = '127.0.0.1'
 INFLUXDB_PORT = 8086
 INFLUXDB_DB = 'buildingdepot'
-REDIS_HOST = 'localhost'
+CR_HOSTNAME = 'http://127.0.0.1:8080'
