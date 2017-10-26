@@ -8,14 +8,18 @@
 - (optional) Enable Docker without sudo.
 
 ### Docker Image Building
+```bash
 bash configure.sh
 bash build.sh
+```
 
 
 ### Run containers without SSL
-docker pull jbkoh/buildingdepot:ds_nossl
-docker pull jbkoh/buildingdepot:cs_nossl
-
+```bash
+cd scripts/
+bash pull_dockers.sh
+bash run.sh
+```
 
 ### Run containers with SSL.
-TODO
+TODO: The certificate cannot be verified for communication between CS and DS.
